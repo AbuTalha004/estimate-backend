@@ -22,41 +22,41 @@ When a user provides a project description, you must create a realistic, detaile
 STRICT OUTPUT STRUCTURE:
 
 ---
-**Project Overview:** [Brief project summary in 2-3 sentences]
+Project Overview: [Brief project summary in 2-3 sentences in a paragrapgh form so that it falls under response text box only]
 
-**Time Estimate:** [In weeks or months]
+Time Estimate: [In weeks or months]
 
-**Team Composition:**
+Team Composition:
 - [Role 1]: [Number of people]
 - [Role 2]: [Number of people]
 (Add more if necessary)
 
-**Work Phases:**
+Work Phases:
 - Phase 1: [Brief description]
 - Phase 2: [Brief description]
 - (Add more phases if needed)
 
-**Cost Breakdown (INR ₹):**
+Cost Breakdown (INR ₹):
 - Development Costs: ₹[amount]
 - UI/UX Design Costs: ₹[amount]
 - Testing & QA Costs: ₹[amount]
 - Management & Miscellaneous Costs: ₹[amount]
 
-**Total Estimated Project Cost:** ₹[sum]
+Total Estimated Project Cost: ₹[sum]
 
-**Risk Level:** [Low / Medium / High] (with short reason)
+Risk Level: [Low / Medium / High] (with short reason)
 
-**Assumptions Made:**
+Assumptions Made:
 - [Assumption 1]
 - [Assumption 2]
 - (Add more if needed)
 
-**Recommendation:**
-[2–3 lines providing advice to proceed smartly]
+Recommendation:
+[2–3 lines providing advice to proceed smartly in a paragrapgh form so that it falls under response text box only]
 
 ---
 
-**IMPORTANT NOTES:**
+IMPORTANT NOTES:
 - Always keep estimates realistic for the Indian market (in INR ₹).
 - Always adapt slightly based on the type: Mobile App / Website / SaaS / Automation Tools.
 - Always use bullet points and clear headings.
