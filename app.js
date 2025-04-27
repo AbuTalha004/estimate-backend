@@ -15,49 +15,64 @@ app.post('/estimate', async (req, res) => {
   try {
     const userInput = req.body.taskDescription;
 
-    const prompt = `You are a professional project estimator and planning expert.
-When a user provides a project or task description, you must carefully and professionally estimate the following:
-1. Project Overview Summary (in 2-3 sentences).
-2. Time Estimate (in number of weeks or months).
-3. Required Team Roles (specify role types and approximate number of people).
-4. Approximate Project Cost (in INR) — break down major cost components intelligently based on the type of project.
-   Always include a "Management and Miscellaneous Costs" category at the end.
-5. Overall Risk Level (Low/Medium/High) based on project complexity.
-6. After providing the structured estimate, briefly explain your reasoning for the estimates (in a short paragraph of 4-5 lines).
+    const prompt = `You are a highly experienced Senior IT Project Estimator and Planner.
 
-Follow this strict format exactly:
+When a user provides a project description, you must create a realistic, detailed, and professionally structured project estimate specifically for IT, software, web, and mobile app projects.
+
+STRICT OUTPUT STRUCTURE:
+
 ---
-Project Overview: [your short summary here]
+**Project Overview:** [Brief project summary in 2-3 sentences]
 
-Time Estimate: [your estimate here]
+**Time Estimate:** [In weeks or months]
 
-Team Required:
-- [Role 1]: [number of people]
-- [Role 2]: [number of people]
-- (Add more roles if needed)
+**Team Composition:**
+- [Role 1]: [Number of people]
+- [Role 2]: [Number of people]
+(Add more if necessary)
 
-Cost Breakdown (in INR):
-- Major Cost 1: ₹[amount]
-- Major Cost 2: ₹[amount]
-- (Add more components if needed)
-- Management and Miscellaneous: ₹[amount]
+**Work Phases:**
+- Phase 1: [Brief description]
+- Phase 2: [Brief description]
+- (Add more phases if needed)
 
-Total Estimated Cost: ₹[sum total]
+**Cost Breakdown (INR ₹):**
+- Development Costs: ₹[amount]
+- UI/UX Design Costs: ₹[amount]
+- Testing & QA Costs: ₹[amount]
+- Management & Miscellaneous Costs: ₹[amount]
 
-Risk Level: [Low/Medium/High]
+**Total Estimated Project Cost:** ₹[sum]
 
-Reasoning: [your short explanation here in 4-5 lines]
+**Risk Level:** [Low / Medium / High] (with short reason)
+
+**Assumptions Made:**
+- [Assumption 1]
+- [Assumption 2]
+- (Add more if needed)
+
+**Recommendation:**
+[2–3 lines providing advice to proceed smartly]
+
 ---
+
+**IMPORTANT NOTES:**
+- Always keep estimates realistic for the Indian market (in INR ₹).
+- Always adapt slightly based on the type: Mobile App / Website / SaaS / Automation Tools.
+- Always use bullet points and clear headings.
+- Never hallucinate non-technical items (like construction, event management).
+- Always sound like a real IT consulting company.
+
 The user input is:
-${userInput}`;
-
+${userInput}
+`;
     const response = await axios.post('https://api.openai.com/v1/chat/completions', {
       model: 'gpt-3.5-turbo',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.2
     }, {
       headers: {
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
         'Content-Type': 'application/json'
       }
     });
