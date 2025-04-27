@@ -50,7 +50,7 @@ Assumptions Made:
 
 
 IMPORTANT NOTES:
-- Always keep estimates realistic for the Indian market (in INR ₹).
+- Always keep estimates realistic for the Indian market keeping in mind how much IT labour is cheap in India(in INR ₹).
 - Always adapt slightly based on the type: Mobile App / Website / SaaS / Automation Tools.
 - Always use bullet points and clear headings.
 - Never hallucinate non-technical items (like construction, event management).
