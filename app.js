@@ -21,9 +21,6 @@ When a user provides a project description, you must create a realistic, detaile
 
 STRICT OUTPUT STRUCTURE:
 
----
-Project Overview: [Brief project summary in 2-3 sentences in a paragrapgh form so that it falls under response text box only]
-
 Time Estimate: [In weeks or months]
 
 Team Composition:
@@ -51,10 +48,6 @@ Assumptions Made:
 - [Assumption 2]
 - (Add more if needed)
 
-Recommendation:
-[2–3 lines providing advice to proceed smartly in a paragrapgh form so that it falls under response text box only]
-
----
 
 IMPORTANT NOTES:
 - Always keep estimates realistic for the Indian market (in INR ₹).
