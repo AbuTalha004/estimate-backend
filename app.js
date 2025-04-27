@@ -59,10 +59,10 @@ ${userInput}
       temperature: 0.2
     }, {
       headers: {
-        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'
-      }
-    });
+  'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+  'Content-Type': 'application/json'
+}
+ });
 
     const aiReply = response.data.choices[0].message.content;
 
