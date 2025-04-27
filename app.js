@@ -1,3 +1,16 @@
+const express = require('express');
+const cors = require('cors');
+const axios = require('axios');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+
+// Route to handle estimate request
 app.post('/estimate', async (req, res) => {
   try {
     const userInput = req.body.taskDescription;
@@ -56,4 +69,9 @@ ${userInput}`;
     console.error('Error:', error.response ? error.response.data : error.message);
     res.status(500).json({ error: 'Failed to generate estimate' });
   }
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
